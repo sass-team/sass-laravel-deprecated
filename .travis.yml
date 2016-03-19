@@ -25,4 +25,5 @@ script:
   - composer install --prefer-source --no-interaction
   - phpunit tests/ --coverage-clover build/logs/clover.xml
 
+
 after_script: php vendor/bin/coveralls -v
