@@ -9,7 +9,6 @@ php:
 matrix:
   fast_finish: true
   allow_failures:
-    - php: 7.0
     - php: hhvm
 
 before_script:
@@ -24,5 +23,6 @@ before_install:
 script:
   - composer install --prefer-source --no-interaction
   - phpunit tests/ --coverage-clover build/logs/clover.xml
+
 
 after_script: php vendor/bin/coveralls -v
