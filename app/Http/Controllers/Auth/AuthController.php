@@ -8,6 +8,11 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * Class AuthController.
+ *
+ * @codeCoverageIgnore
+ */
 class AuthController extends Controller
 {
     /*

@@ -5,6 +5,11 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;
 
+/**
+ * Class Inspire.
+ *
+ * @codeCoverageIgnore
+ */
 class Inspire extends Command
 {
     /**
@@ -31,3 +36,4 @@ class Inspire extends Command
         $this->comment(PHP_EOL.Inspiring::quote().PHP_EOL);
     }
 }
+

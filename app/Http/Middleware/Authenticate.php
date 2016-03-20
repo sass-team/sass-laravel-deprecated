@@ -5,6 +5,11 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * Class Authenticate.
+ *
+ * @codeCoverageIgnore
+ */
 class Authenticate
 {
     /**
@@ -28,3 +33,4 @@ class Authenticate
         return $next($request);
     }
 }
+
