@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response as HttpResponses;
 
 
 /**
- * Class ApiController
+ * Class ApiController.
  *
  * @codeCoverageIgnore
  */
@@ -40,7 +40,6 @@ abstract class ApiController extends Controller
      *              "status_code": 404
      *          }
      *     }
-     *
      */
     /**
      * @param string $message
