@@ -9,7 +9,6 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\Response as HttpResponses;
 
-
 /**
  * Class ApiController.
  *
@@ -41,6 +40,7 @@ abstract class ApiController extends Controller
      *          }
      *     }
      */
+
     /**
      * @param string $message
      *
