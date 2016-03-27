@@ -6,5 +6,5 @@ Homestead.yaml
 Homestead.json
 .env
 
-public_html/apidoc
+public_html/api
 

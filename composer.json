@@ -29,7 +29,10 @@
    "autoload-dev": {
 	  "classmap": [
 		 "tests/TestCase.php"
-	  ]
+	  ],
+	  "psr-4": {
+		 "Tests\\": "tests/"
+	  }
    },
    "scripts": {
 	  "post-root-package-install": [
@@ -42,7 +45,7 @@
 		 "php artisan clear-compiled",
 		 "php artisan optimize",
 		 "npm install apidoc -g",
-		 "apidoc -i ./app/ -o public_html/apidoc/"
+		 "apidoc -i ./app/ -o public_html/api/"
 	  ],
 	  "post-update-cmd": [
 		 "php artisan clear-compiled",
