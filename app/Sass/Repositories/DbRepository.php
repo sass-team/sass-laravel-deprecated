@@ -10,5 +10,4 @@ namespace App\Sass\Repositories;
  */
 abstract class DbRepository
 {
-
 }

@@ -11,7 +11,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['name', 'email',];
+    protected $fillable = ['name', 'email'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

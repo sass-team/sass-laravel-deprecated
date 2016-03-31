@@ -26,6 +26,11 @@ class DbUserRepository extends DbRepository implements UserRepository
         return $this->hasRole($user, Role::TUTOR_ROLE);
     }
 
+    /**
+     * @param User $user
+     * @param      $requiredRole
+     * @return bool
+     */
     private function hasRole(User $user, $requiredRole)
     {
         foreach ($user->roles()->get() as $role) {
@@ -50,6 +55,11 @@ class DbUserRepository extends DbRepository implements UserRepository
         return $this->assignRole($user, $role);
     }
 
+    /**
+     * @param User $user
+     * @param      $role
+     * @return User|bool
+     */
     private function assignRole(User $user, $role)
     {
         $user->roles()->attach($role);
