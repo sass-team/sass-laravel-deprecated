@@ -6,20 +6,23 @@
  */
 namespace Tests\integration\app\Sass\Repositories\User;
 
+use App\Sass\Repositories\User\DbUserRepository;
 use App\User;
-use DbUserRepository;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
 class DbUserRepositoryTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /** @test */
     public function it_assigns_tutor_role_to_user()
     {
         $dbUserRepository = new DbUserRepository();
         $user = factory(User::class)->create();
 
-        $this->assertFalse($dbUserRepository->hasCompanyRepresentativeRole($user));
-        $this->assertNotFalse($user = $dbUserRepository->assignCompanyRepresentativeRole($user));
-        $this->assertTrue($dbUserRepository->hasCompanyRepresentativeRole($user));
+        $this->assertFalse($dbUserRepository->hasTutorRole($user));
+        $this->assertNotFalse($user = $dbUserRepository->assignTutorRole($user));
+        $this->assertTrue($dbUserRepository->hasTutorRole($user));
     }
 }

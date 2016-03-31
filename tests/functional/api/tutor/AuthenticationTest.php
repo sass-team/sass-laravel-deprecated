@@ -15,8 +15,5 @@ class AuthenticationTest extends TestCase
     /** @test */
     public function it_requests_browser_login_button()
     {
-        $user = new User;
-
-
     }
 }
