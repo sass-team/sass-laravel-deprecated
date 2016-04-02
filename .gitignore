@@ -6,5 +6,5 @@ Homestead.yaml
 Homestead.json
 .env
 
-public_html/api
-
+public_html/api/
+bower_components/

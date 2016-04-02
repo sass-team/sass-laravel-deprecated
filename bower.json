@@ -1,0 +1,39 @@
+{
+  "name": "sass-laravel",
+  "description": "Content Management System for College Peer Tutoring Workshops.",
+  "main": "",
+  "authors": [
+    "Rizart Dokollari <r.dokollari@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "CMS",
+    "PHP",
+    "Laravel",
+    "DEREE",
+    "TDD"
+  ],
+  "homepage": "https://github.com/sass-team/sass-laravel",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.5.0",
+    "bootstrap": "^3.3.6",
+    "pnotify": "^3.0.0",
+    "jquery-ui": "^1.11.4",
+    "iCheck": "icheck#^1.0.2",
+    "select2": "^4.0.2",
+    "jquery-simplecolorpicker": "^0.3.0",
+    "fullcalendar": "^2.6.1",
+    "bootstrap-toggle": "^2.2.2",
+    "bootstrap-timepicker": "^0.5.2",
+    "parsleyjs": "^2.3.7",
+    "bootstrap-datetimepicker": "^0.0.11"
+  }
+}
