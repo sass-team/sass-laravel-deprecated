@@ -15,13 +15,10 @@
     <meta name="author" content="Rizart Dokollar & George Skarlatos"/>
     <link rel="shortcut icon" href="{!! url('assets/img/logos/favicon.ico') !!}">
 
-    <link rel="shortcut icon" href="{!! elixir('above-the-fold-content.min.css') !!}">
+    <link rel="shortcut icon" href="{!! elixir('css/above-the-fold-content.min.css') !!}">
 
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,800italic,400,600,800">
-
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/font-awesome-animation.min.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/custom.css" type="text/css"/>
 
     <style type="text/css">
         #wrapper {
@@ -36,8 +33,8 @@
 <header id="header">
 
     <h1 id="site-logo">
-        <a href="<?php echo BASE_URL; ?>">
-            <img src="<?php echo BASE_URL; ?>assets/img/logos/logo.png" alt="Site Logo"/>
+        <a href="{!! route('auth.login') !!}">
+            <img src="{!! url('img/logo.png') !!}" alt="Site Logo"/>
         </a>
     </h1>
 
@@ -61,34 +58,34 @@
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
                 <i class="fa fa-user"></i>
-                <?php echo "Welcome " . $user->getFirstName(); ?>
+<!--                --><?php //echo "Welcome ".$user->getFirstName(); ?>
                 <span class="caret"></span>
             </a>
 
-            <ul class="dropdown-menu" role="menu">
-                <!-- "My schedule" choice is shown only to type tutor -->
-                <?php if ($user->isTutor()) { ?>
-                <li>
-                    <a href="<?php echo BASE_URL; ?>account/schedule">
-                        <i class="fa fa-calendar"></i>
-                        &nbsp;&nbsp;My Schedule
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASE_URL; ?>appointments/calendar">
-                        <i class="fa fa-calendar"></i>
-                        &nbsp;&nbsp;My Appointments
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <?php } ?>
-                <li>
-                    <a href="<?php echo BASE_URL; ?>logout">
-                        <i class="fa fa-sign-out"></i>
-                        &nbsp;&nbsp;Logout
-                    </a>
-                </li>
-            </ul>
+            {{--<ul class="dropdown-menu" role="menu">--}}
+                {{--<!-- "My schedule" choice is shown only to type tutor -->--}}
+                {{--<?php if ($user->isTutor()) { ?>--}}
+                {{--<li>--}}
+                    {{--<a href="<?php echo BASE_URL; ?>account/schedule">--}}
+                        {{--<i class="fa fa-calendar"></i>--}}
+                        {{--&nbsp;&nbsp;My Schedule--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<a href="<?php echo BASE_URL; ?>appointments/calendar">--}}
+                        {{--<i class="fa fa-calendar"></i>--}}
+                        {{--&nbsp;&nbsp;My Appointments--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="divider"></li>--}}
+                {{--<?php } ?>--}}
+                {{--<li>--}}
+                    {{--<a href="<?php echo BASE_URL; ?>logout">--}}
+                        {{--<i class="fa fa-sign-out"></i>--}}
+                        {{--&nbsp;&nbsp;Logout--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+            {{--</ul>--}}
         </li>
     </ul>
 

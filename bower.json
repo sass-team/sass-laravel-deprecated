@@ -34,6 +34,7 @@
     "bootstrap-toggle": "^2.2.2",
     "bootstrap-timepicker": "^0.5.2",
     "parsleyjs": "^2.3.7",
-    "bootstrap-datetimepicker": "^0.0.11"
+    "bootstrap-datetimepicker": "^0.0.11",
+    "font-awesome-animation": "^0.0.8"
   }
 }

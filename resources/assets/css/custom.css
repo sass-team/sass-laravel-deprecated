@@ -1,0 +1,33 @@
+.dashboard-stat.primary, .dashboard-stat.primary:active {
+    background-color: #3fa67a;
+}
+
+.dashboard-stat.secondary, .dashboard-stat.secondary:active {
+    background-color: #f0ad4e;
+}
+
+.dashboard-stat.secondary:hover {
+    background-color: #f0ad4e;
+}
+
+.dashboard-stat.primary:hover {
+    background-color: #3aaf7f;
+}
+
+.dashboard-stat.secondary i, .dashboard-stat.secondary:hover i, .dashboard-stat.secondary:active i {
+    color: #f0ad4e;
+}
+
+.dashboard-stat.primary i, .dashboard-stat.primary:hover i, .dashboard-stat.primary:active i {
+    color: #1da67a;
+}
+
+#back-to-top {
+    bottom: 60px;
+}
+
+.parsley-errors-list.filled {
+    color: #B94A48!important;
+    background-color: #F2DEDE!important;
+    border: 1px solid #EED3D7!important;
+}

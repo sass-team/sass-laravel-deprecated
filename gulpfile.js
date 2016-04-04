@@ -16,12 +16,14 @@ elixir(function (mix) {
     mix.copy('bower_components/font-awesome/fonts', 'public/fonts');
     mix.copy('bower_components/bootstrap/dist/fonts', 'public/fonts');
 
-    mix.less('bower_components/bootstrap-timepicker/css/timepicker.less',
-        'bower_components/bootstrap-timepicker/css/timepicker.css');
+    // mix.less('bower_components/bootstrap-timepicker/css/timepicker.less',
+    //     'bower_components/bootstrap-timepicker/css/timepicker.css', {paths: ['.'], filename: 'timepicker.css'});
 
     mix
         .styles([
-            'bower_components/bootstrap/dist/css/bootstrap.min.css'
+            'bower_components/bootstrap/dist/css/bootstrap.min.css',
+            'resources/assets/css/App.css',
+            'resources/assets/css/custom.css'
         ], 'build/css/above-the-fold-content.min.css', '.')
         .styles([
             'bower_components/font-awesome/css/font-awesome.min.css',
@@ -32,12 +34,12 @@ elixir(function (mix) {
             'bower_components/select2/dist/css/select2.min.css',
             'bower_components/jquery-simplecolorpicker/jquery.simplecolorpicker.css',
             'bower_components/fullcalendar/dist/fullcalendar.min.css',
-            'resources/assets/css/App.css',
             'bower_components/pnotify/dist/pnotify.css',
             'bower_components/bootstrap-toggle/css/bootstrap-toggle.min.css',
             'bower_components/parsleyjs/src/parsley.css',
-            'bower_components/bootstrap-timepicker/css/timepicker.css',
-            'bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
+            // 'bower_components/bootstrap-timepicker/css/timepicker.css',
+            'bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
+            'bower_components/font-awesome-animation/dist/font-awesome-animation.min.css',
         ], 'build/css/master.min.css', '.');
 
     mix.scripts([

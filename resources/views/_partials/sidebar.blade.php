@@ -1,14 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Riza
- * Date: 5/13/14
- * Time: 12:24 AM
- */
-?>
-
 <div id="sidebar-wrapper" class="collapse sidebar-collapse">
-
     <div id="search">
         <form>
             <input class="form-control input-sm" type="text" name="search" placeholder="Search..."/>
@@ -18,7 +8,6 @@
     </div>
     <!-- #search -->
     <nav id="sidebar">
-
         <ul id="main-nav" class="open-active">
 
             <li class="<?php if ($section == "dashboard")
