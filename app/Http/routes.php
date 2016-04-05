@@ -11,8 +11,9 @@ Route::group(['middleware' => ['web']], function () {
 
     // not implemented
     Route::get('dashboard', ['as' => 'dashboard_path', 'uses' => 'Auth\AuthController@getLogin']);
-
+    Route::get('appointments/calendar', ['as' => 'dashboard_path', 'uses' => 'Auth\AuthController@getLogin']);
     Route::resource('appointments', AuthController::class);
+    Route::resource('staff', AuthController::class);
 });
 
 Route::group(['middleware' => ['api'], 'prefix' => 'api'], function () {

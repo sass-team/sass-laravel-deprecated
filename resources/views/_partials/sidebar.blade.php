@@ -26,24 +26,24 @@
 
                 <ul class="sub-nav">
 
-                    <?php if ( ! $user->isTutor()): ?>
+                    @if( ! $currentUserHasTutorRole){
                     <li>
-                        <a href="<?php echo BASE_URL; ?>appointments/add">
+                        <a href="{!! route('appointments.create') !!}">
                             <i class="fa fa-plus-square"></i>
                             Add
                         </a>
                     </li>
-                    <?php endif; ?>
-                    <?php if ($user->isTutor()): ?>
+                    }
+                    @if( $currentUserHasTutorRole){
                     <li>
-                        <a href="<?php echo BASE_URL; ?>appointments/calendar">
+                        <a href="{!! route('appointments/calendar') !!}">
                             <i class="fa fa-calendar"></i>
                             Calendar
                         </a>
                     </li>
-                    <?php endif; ?>
+                    }
                     <li>
-                        <a href="<?php echo BASE_URL; ?>appointments/list">
+                        <a href="{!! route('appointments.index') !!}">
                             <i class="fa fa-list"></i>
                             List
                         </a>

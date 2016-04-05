@@ -1,5 +1,7 @@
 <?php
 
+use App\Providers\ComposerServiceProvider;
+
 return [
 
     /*
@@ -162,7 +164,10 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
 
-
+        /*
+         * Internal Service Providers
+         */
+        ComposerServiceProvider::class,
     ],
 
     /*
