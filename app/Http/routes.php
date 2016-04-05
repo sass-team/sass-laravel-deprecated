@@ -9,7 +9,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('staff', 'Auth\AuthController');
     });
 
-    Route::get('/', ['as' => 'marketing_page', function () {
+    Route::get('/', ['as' => 'landing_page', function () {
         return view('welcome');
     }]);
 
