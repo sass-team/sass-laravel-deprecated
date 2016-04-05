@@ -10,21 +10,14 @@
     <nav id="sidebar">
         <ul id="main-nav" class="open-active">
 
-            <li class="<?php if ($section == "dashboard")
-            {
-                echo "active";
-            } ?>">
-
-                <a href="<?php echo BASE_URL; ?>">
+            <li class="{!! active_class(if_route(['dashboard_path'])) !!}">
+                <a href="{!! route('dashboard_path') !!}">
                     <i class="fa fa-dashboard"></i>
                     Dashboard
                 </a>
             </li>
 
-            <li class="dropdown <?php if ($section == "appointments")
-            {
-                echo "active";
-            } ?>">
+            <li class="dropdown {!! active_class(if_route(['appointments.index'])) !!}">
                 <a href="javascript:;">
                     <i class="fa fa-table"></i>
                     Appointments
@@ -58,8 +51,7 @@
                 </ul>
             </li>
 
-            <li class="dropdown <?php if ($section == "staff")
-            {
+            <li class="dropdown <?php if ($section == "staff") {
                 echo "active";
             } ?>">
                 <a href="javascript:;">
@@ -109,8 +101,7 @@
 
             <?php if ( ! $user->isTutor())
             { ?>
-            <li class="dropdown <?php if (strcmp($section, "academia") === 0)
-            {
+            <li class="dropdown <?php if (strcmp($section, "academia") === 0) {
                 echo "active";
             } ?>">
                 <a href="javascript:">
@@ -155,8 +146,7 @@
             <?php } ?>
 
 
-            <li class="dropdown <?php if ($section == "account")
-            {
+            <li class="dropdown <?php if ($section == "account") {
                 echo "active";
             } ?>">
                 <a href="javascript:;">

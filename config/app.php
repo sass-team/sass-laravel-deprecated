@@ -160,6 +160,7 @@ return [
          * External Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
 
 
     ],
@@ -213,7 +214,6 @@ return [
          */
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
-
+        'Active'    => HieuLe\Active\Facades\Active::class,
     ],
-
 ];
