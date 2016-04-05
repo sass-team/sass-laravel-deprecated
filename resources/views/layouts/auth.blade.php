@@ -9,9 +9,7 @@
 
     <title>Stylish Portfolio - Start Bootstrap Theme</title>
 
-    <style type="text/css">
-        {!! File::get(public_path(elixir('css/landing-page/above-the-fold-content.min.css'))) !!}
-    </style>
+    <link rel="shortcut icon" href="{!! elixir('css/landing-page/above-the-fold-content.min.css') !!}">
 
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
           rel="stylesheet" type="text/css">
@@ -260,7 +258,8 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="{!! elixir('js/landing-page/master.min.js') !!}"></script>
+<!-- jQuery -->
+<script src="{!! elixir('js/landing-page/master.min.js') !!}"></script>
 
 <!-- Custom Theme JavaScript -->
 <script>
