@@ -2,12 +2,11 @@
 
 use App\Http\Controllers\Auth\AuthController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('auth/login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@getLogin']);
+    Route::get('/', ['as' => 'marketing_page', function () {
+        return 'welcome page';
+    }]);
 
     // not implemented
     Route::get('dashboard', ['as' => 'dashboard_path', 'uses' => 'Auth\AuthController@getLogin']);

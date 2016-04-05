@@ -33,7 +33,8 @@
                             Add
                         </a>
                     </li>
-                    }
+                    @endif
+
                     @if( $currentUserHasTutorRole){
                     <li>
                         <a href="{!! route('appointments/calendar') !!}">
@@ -41,7 +42,7 @@
                             Calendar
                         </a>
                     </li>
-                    }
+                    @endif
                     <li>
                         <a href="{!! route('appointments.index') !!}">
                             <i class="fa fa-list"></i>
@@ -51,9 +52,8 @@
                 </ul>
             </li>
 
-            <li class="dropdown <?php if ($section == "staff") {
-                echo "active";
-            } ?>">
+            <li class="dropdown {!! active_class(if_route(['staff.index'])) !!}">
+            <li class="dropdown ">
                 <a href="javascript:;">
                     <i class="fa fa-group"></i>
                     SASS Staff
@@ -62,20 +62,19 @@
 
                 <ul class="sub-nav">
                     <li>
-                        <a href="<?php echo BASE_URL; ?>staff/">
+                        <a href="{!! route('staff.index') !!}">
                             <i class="fa fa-dashboard"></i>
                             Personnel
                         </a>
                     </li>
-
-                    <?php if ( ! $user->isTutor()): ?>
-                    <li>
-                        <a href="<?php echo BASE_URL; ?>staff/schedules">
-                            <i class="fa fa-calendar"></i>
-                            Schedules
-                        </a>
-                    </li>
-                    <?php endif; ?>
+                    @if( ! $currentUserHasTutorRole)
+                        <li>
+                            <a href="<?php echo BASE_URL; ?>staff/schedules">
+                                <i class="fa fa-calendar"></i>
+                                Schedules
+                            </a>
+                        </li>
+                    @endif
 
                     <?php if ( ! $user->isTutor()): ?>
                     <li>

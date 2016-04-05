@@ -4,6 +4,7 @@ namespace App\Http\ViewComposers;
 
 use App\Sass\Repositories\User\UserRepository;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 
 class SidebarComposer
