@@ -36,6 +36,6 @@
     "parsleyjs": "^2.3.7",
     "bootstrap-datetimepicker": "^0.0.11",
     "font-awesome-animation": "^0.0.8",
-    "rdok/startbootstrap-stylish-portfolio": "rdok-startbootstrap-stylish-portfolio#^1.1.0"
+    "rdok-startbootstrap-stylish-portfolio": "^1.1.1"
   }
 }

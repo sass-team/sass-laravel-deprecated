@@ -23,6 +23,30 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        .header {
+            display: table;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url(img/landing-page/bg.jpg) no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+        .callout {
+            display: table;
+            width: 100%;
+            height: 400px;
+            color: #fff;
+            background: url(../img/landing-page/callout.jpg) no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -168,28 +192,28 @@
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                <img class="img-portfolio img-responsive" src="img/landing-page/portfolio-1.jpg">
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                <img class="img-portfolio img-responsive" src="img/landing-page/portfolio-2.jpg">
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                <img class="img-portfolio img-responsive" src="img/landing-page/portfolio-3.jpg">
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                <img class="img-portfolio img-responsive" src="img/landing-page/portfolio-4.jpg">
                             </a>
                         </div>
                     </div>
@@ -286,7 +310,7 @@
                 if (target.length) {
                     $('html,body').animate({
                         scrollTop: target.offset().top
-                    }, 1000);
+                    }, 300);
                     return false;
                 }
             }

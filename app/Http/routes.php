@@ -31,5 +31,5 @@ Route::group(['middleware' => ['api'], 'prefix' => 'api'], function () {
 });
 
 // 404
-Route::any('{any}', ['as' => 'exception.not_found', 'uses' => 'ExceptionsController@notFound'])
-    ->where('any', '(.*)?');
+//Route::any('{any}', ['as' => 'exception.not_found', 'uses' => 'ExceptionsController@notFound'])
+//    ->where('any', '(.*)?');

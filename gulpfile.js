@@ -11,16 +11,19 @@ var elixir = require('laravel-elixir');
  |
  */
 
+elixir.config.publicPath = 'public_html';
+
 elixir(function (mix) {
 
-    mix.copy('bower_components/font-awesome/fonts', 'public/fonts');
-    mix.copy('bower_components/bootstrap/dist/fonts', 'public/fonts');
+    mix.copy('bower_components/font-awesome/fonts', 'public_html/fonts');
+    mix.copy('bower_components/bootstrap/dist/fonts', 'public_html/fonts');
+
+    // landing page
+    mix.copy('bower_components/rdok/startbootstrap-stylish-portfolio/font-awesome/fonts', 'public_html/fonts');
+    mix.copy('bower_components/rdok-startbootstrap-stylish-portfolio/img', 'public_html/img/landing-page');
 
     // mix.less('bower_components/bootstrap-timepicker/css/timepicker.less',
     //     'bower_components/bootstrap-timepicker/css/timepicker.css', {paths: ['.'], filename: 'timepicker.css'});
-
-    // landing page
-    mix.copy('bower_components/rdok/startbootstrap-stylish-portfolio/font-awesome/fonts', 'public/css/landing-page');
 
     mix
         .styles([
@@ -32,7 +35,8 @@ elixir(function (mix) {
         .styles([
             'bower_components/rdok/startbootstrap-stylish-portfolio/css/bootstrap.min.css',
             'bower_components/rdok/startbootstrap-stylish-portfolio/css/stylish-portfolio.css',
-            'bower_components/rdok/startbootstrap-stylish-portfolio/font-awesome/css/font-awesome.min.css'
+            'bower_components/rdok/startbootstrap-stylish-portfolio/font-awesome/css/font-awesome.min.css',
+            'bower_components/pnotify/dist/pnotify.css',
         ], 'build/css/landing-page/above-the-fold-content.min.css', '.')
         .styles([
             'bower_components/font-awesome/css/font-awesome.min.css',
@@ -64,6 +68,8 @@ elixir(function (mix) {
         .scripts([
             'bower_components/rdok/startbootstrap-stylish-portfolio/js/jquery.js',
             'bower_components/rdok/startbootstrap-stylish-portfolio/js/bootstrap.min.js',
+            'bower_components/pnotify/dist/pnotify.js',
+            'bower_components/pnotify/dist/pnotify.confirm.js',
             'resources/assets/js/flash.js',
             'resources/assets/js/loadStyleSheets.js',
         ], 'build/js/landing-page/master.min.js', '.');
