@@ -1,5 +1,6 @@
 <?php
 
+use App\Providers\BackendServiceProvider;
 use App\Providers\ComposerServiceProvider;
 
 return [
@@ -169,6 +170,7 @@ return [
          * Internal Service Providers
          */
         ComposerServiceProvider::class,
+        BackendServiceProvider::class,
     ],
 
     /*

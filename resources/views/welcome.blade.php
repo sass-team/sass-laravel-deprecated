@@ -57,22 +57,22 @@
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-            <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
+            <a href='#top' onclick=$('#menu-close').click();>SASS App</a>
         </li>
         <li>
-            <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            <a href='#top' onclick=$('#menu-close').click();>{!! $landingPage->home_title !!}</a>
         </li>
         <li>
-            <a href="#about" onclick=$("#menu-close").click();>About</a>
+            <a href="#about" onclick=$('#menu-close').click();>About</a>
         </li>
         <li>
-            <a href="#services" onclick=$("#menu-close").click();>Services</a>
+            <a href="#services" onclick=$('#menu-close').click();>Services</a>
         </li>
         <li>
-            <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+            <a href="#portfolio" onclick=$('#menu-close').click();>Portfolio</a>
         </li>
         <li>
-            <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+            <a href="#contact" onclick=$('#menu-close').click();>Contact</a>
         </li>
     </ul>
 </nav>
@@ -80,10 +80,10 @@
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
-        <h1>Start Bootstrap</h1>
-        <h3>Free Bootstrap Themes &amp; Templates</h3>
+        <h1>{!! $landingPage->title !!}</h1>
+        <h3>{!! $landingPage->home_description !!}</h3>
         <br>
-        <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        <a href="{!! route('login.get') !!}" class="btn btn-dark btn-lg">{{ $landingPage->home_access_button }}</a>
     </div>
 </header>
 

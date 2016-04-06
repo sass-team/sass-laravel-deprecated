@@ -11,5 +11,5 @@ class LandingPage extends Model
      *
      * @var array
      */
-    protected $fillable = ['active', 'home_title', 'home_description', 'home_access_button'];
+    protected $fillable = ['active', 'title', 'home_title', 'home_description', 'home_access_button'];
 }

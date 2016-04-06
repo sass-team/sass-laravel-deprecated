@@ -9,12 +9,10 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('staff', 'Auth\AuthController');
     });
 
-    Route::get('/', ['as' => 'landing_page', function () {
-        return view('welcome');
-    }]);
+    Route::get('/', ['as' => 'landing_page', 'uses' => 'LandingPagesController@getActive']);
 
     // Authentication Routes...
-    $this->get('login', 'Auth\AuthController@showLoginForm');
+    $this->get('login', ['as' => 'login.get', 'uses' => 'Auth\AuthController@showLoginForm']);
     $this->post('login', 'Auth\AuthController@login');
     $this->get('logout', 'Auth\AuthController@logout');
 

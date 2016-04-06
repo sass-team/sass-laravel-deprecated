@@ -17,15 +17,18 @@ class CreateLandingPagesTable extends Migration
         Schema::create('landing_pages', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('active')->default(false);
+            $table->string('title');
             $table->string('home_title');
             $table->string('home_description');
             $table->string('home_access_button');
+
             $table->timestamps();
         });
 
         LandingPage::create([
             'active'             => true,
-            'home_title'         => 'SASS App',
+            'title'              => 'SASS App',
+            'home_title'         => 'Home',
             'home_description'   => 'CMS for <a href="http://www.acg.edu/academics/center-for-academic-enrichment-cae/student-academic-support-services-sass">Student Academic Support Services</a>',
             'home_access_button' => 'Access',
         ]);
