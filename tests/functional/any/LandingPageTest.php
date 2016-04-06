@@ -11,8 +11,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
 /**
- * Class LandingPageTest
- * @package Tests\functional\any
+ * Class LandingPageTest.
  */
 class LandingPageTest extends TestCase
 {

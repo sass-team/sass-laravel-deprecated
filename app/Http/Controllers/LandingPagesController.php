@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Sass\Repositories\LandingPage\LandingPageRepository;
 
 class LandingPagesController extends Controller

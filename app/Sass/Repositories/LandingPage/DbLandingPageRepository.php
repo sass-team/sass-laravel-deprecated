@@ -13,7 +13,6 @@ use App\Sass\Repositories\DbRepository;
  */
 class DbLandingPageRepository extends DbRepository implements LandingPageRepository
 {
-
     /**
      * Return the active landing page.
      *
