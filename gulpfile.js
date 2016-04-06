@@ -71,7 +71,6 @@ elixir(function (mix) {
             'bower_components/pnotify/dist/pnotify.js',
             'bower_components/pnotify/dist/pnotify.confirm.js',
             'resources/assets/js/loadStyleSheets.js',
-            'resources/assets/js/landing-page.js',
             'resources/assets/js/flash.js',
         ], 'build/js/landing-page/master.min.js', '.');
 
