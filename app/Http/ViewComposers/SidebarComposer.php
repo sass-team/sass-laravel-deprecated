@@ -6,6 +6,9 @@ use App\Sass\Repositories\User\UserRepository;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\View;
 
+/**
+ * Class SidebarComposer
+ */
 class SidebarComposer
 {
     /**

@@ -14,8 +14,8 @@
         </testsuite>
     </testsuites>
     <filter>
-        <whitelist>
-            <directory suffix=".php">app/</directory>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">app/Sass/</directory>
         </whitelist>
     </filter>
     <php>

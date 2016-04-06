@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+/**
+ * Class HomeController.
+ */
 class HomeController extends Controller
 {
     /**
