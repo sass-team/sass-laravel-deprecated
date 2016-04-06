@@ -20,6 +20,11 @@ class SidebarComposer
      */
     private $guard;
 
+    /**
+     * SidebarComposer constructor.
+     * @param UserRepository $userRepository
+     * @param Guard          $guard
+     */
     public function __construct(UserRepository $userRepository, Guard $guard)
     {
         $this->userRepository = $userRepository;
