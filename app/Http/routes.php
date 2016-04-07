@@ -12,7 +12,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['as' => 'landing_page', 'uses' => 'LandingPagesController@getActive']);
 
     // Authentication Routes...
-    $this->get('login', ['as' => 'login.get', 'uses' => 'Auth\AuthController@showLoginForm']);
+    $this->get('login', ['as' => 'login.get', 'uses' => 'Auth\AuthController@getLogin']);
     $this->post('login', 'Auth\AuthController@login');
     $this->get('logout', 'Auth\AuthController@logout');
 

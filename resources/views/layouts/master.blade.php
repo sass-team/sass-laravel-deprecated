@@ -13,9 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Content Management System for Peer Tutoring Workshops">
     <meta name="author" content="Rizart Dokollar & George Skarlatos"/>
-    <link rel="shortcut icon" href="{!! url('assets/img/logos/favicon.ico') !!}">
 
-    <link rel="shortcut icon" href="{!! elixir('css/above-the-fold-content.min.css') !!}">
+    <style type="text/css">
+        {!! File::get(public_path(elixir('css/landing-page/above-the-fold-content.min.css'))) !!}
+    </style>
 
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,800italic,400,600,800">

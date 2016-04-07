@@ -22,15 +22,20 @@ elixir(function (mix) {
     mix.copy('bower_components/rdok/startbootstrap-stylish-portfolio/font-awesome/fonts', 'public_html/fonts');
     mix.copy('bower_components/rdok-startbootstrap-stylish-portfolio/img', 'public_html/img/landing-page');
 
-    // mix.less('bower_components/bootstrap-timepicker/css/timepicker.less',
-    //     'bower_components/bootstrap-timepicker/css/timepicker.css', {paths: ['.'], filename: 'timepicker.css'});
-
     mix
         .styles([
             'bower_components/bootstrap/dist/css/bootstrap.min.css',
-            'resources/assets/css/App.css',
+            'bower_components/sass-bootstrap-template/css/App.css',
             'resources/assets/css/custom.css'
         ], 'build/css/above-the-fold-content.min.css', '.')
+        .styles([
+            'bower_components/rdok/startbootstrap-stylish-portfolio/font-awesome/css/font-awesome.min.css',
+            'bower_components/rdok/startbootstrap-stylish-portfolio/css/bootstrap.min.css',
+            'bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css',
+            'bower_components/sass-bootstrap-template/css/App.css',
+            'bower_components/sass-bootstrap-template/css/Login.css',
+            'resources/assets/css/custom.css'
+        ], 'build/css/auth/above-the-fold-content.min.css', '.')
         // Landing page.
         .styles([
             'bower_components/rdok/startbootstrap-stylish-portfolio/css/bootstrap.min.css',
@@ -56,14 +61,30 @@ elixir(function (mix) {
         ], 'build/css/master.min.css', '.');
 
     mix.scripts([
-            'resources/assets/js/loadStyleSheets.js',
             'bower_components/jquery/dist/jquery.min.js',
+            'resources/assets/js/loadStyleSheets.js',
             'bower_components/bootstrap/dist/js/bootstrap.min.js',
             'bower_components/jquery-ui/jquery-ui.min.js',
             'bower_components/pnotify/dist/pnotify.js',
             'bower_components/pnotify/dist/pnotify.confirm.js',
             'resources/assets/js/flash.js',
         ], 'build/js/master.min.js', '.')
+        // Auth
+        .scripts([
+            'bower_components/sass-bootstrap-template/js/libs/jquery-1.9.1.min.js',
+            'bower_components/sass-bootstrap-template/js/libs/jquery-ui-1.9.2.custom.min.js',
+            'bower_components/sass-bootstrap-template/js/libs/bootstrap.min.js',
+            'bower_components/sass-bootstrap-template/js/App.js',
+            'bower_components/sass-bootstrap-template/js/Login.js',
+
+            'bower_components/pnotify/dist/pnotify.js',
+            'bower_components/pnotify/dist/pnotify.confirm.js',
+
+            'resources/assets/js/flash.js',
+        ], 'build/js/auth/master.min.js', '.')
+        .scripts([
+            'bower_components/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js',
+        ], 'build/js/auth/login.min.js', '.')
         // Landing page.
         .scripts([
             'bower_components/rdok/startbootstrap-stylish-portfolio/js/jquery.js',
@@ -79,6 +100,9 @@ elixir(function (mix) {
         './build/css/landing-page/above-the-fold-content.min.css',
         './build/css/master.min.css',
         './build/js/master.min.js',
-        './build/js/landing-page/master.min.js'
+        './build/js/landing-page/master.min.js',
+        './build/css/auth/above-the-fold-content.min.css',
+        './build/js/auth/master.min.js',
+        './build/js/auth/login.min.js',
     ]);
 });
