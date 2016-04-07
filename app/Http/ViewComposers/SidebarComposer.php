@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\View;
 
 /**
- * Class SidebarComposer
+ * Class SidebarComposer.
  */
 class SidebarComposer
 {

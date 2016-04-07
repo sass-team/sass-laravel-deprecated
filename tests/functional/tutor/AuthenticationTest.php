@@ -10,7 +10,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
 /**
- * Class AuthenticationTest
+ * Class AuthenticationTest.
  */
 class AuthenticationTest extends TestCase
 {

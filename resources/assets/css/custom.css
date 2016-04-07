@@ -1,3 +1,41 @@
+#login-container #logo {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    background-color: #827CDC;
+    border-radius: 100px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background-color: #6963ce;
+    border-color: #827CDC;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #827CDC;
+    border-color: #827CDC;
+}
+
+#footer a {
+    color: #352F8F;
+}
+
+a:hover, a:focus {
+    color: #2a6496;
+    text-decoration: underline;
+}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
 .dashboard-stat.primary, .dashboard-stat.primary:active {
     background-color: #3fa67a;
 }
@@ -27,7 +65,7 @@
 }
 
 .parsley-errors-list.filled {
-    color: #B94A48!important;
-    background-color: #F2DEDE!important;
-    border: 1px solid #EED3D7!important;
+    color: #B94A48 !important;
+    background-color: #F2DEDE !important;
+    border: 1px solid #EED3D7 !important;
 }

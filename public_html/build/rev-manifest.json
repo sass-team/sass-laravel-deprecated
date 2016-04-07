@@ -1,7 +1,10 @@
 {
-  "css/above-the-fold-content.min.css": "css/above-the-fold-content.min-a5f47608eb.css",
+  "css/above-the-fold-content.min.css": "css/above-the-fold-content.min-30302668ac.css",
+  "css/auth/above-the-fold-content.min.css": "css/auth/above-the-fold-content.min-4d560558cb.css",
   "css/landing-page/above-the-fold-content.min.css": "css/landing-page/above-the-fold-content.min-a5ac4576af.css",
   "css/master.min.css": "css/master.min-7ca63e3e5f.css",
-  "js/landing-page/master.min.js": "js/landing-page/master.min-74dd3000fa.js",
-  "js/master.min.js": "js/master.min-782f5336ab.js"
+  "js/auth/login.min.js": "js/auth/login.min-7f94842e3b.js",
+  "js/auth/master.min.js": "js/auth/master.min-11005ae63a.js",
+  "js/landing-page/master.min.js": "js/landing-page/master.min-513a7df697.js",
+  "js/master.min.js": "js/master.min-3965a41bf8.js"
 }

@@ -25,6 +25,7 @@ class LandingPageTest extends TestCase
 
         $this->visit(route('landing_page'))
             ->seePageIs(route('landing_page'))
+            ->see('<title>SASS App</title>')
             ->see("<h1>$landingPage->title</h1>")
             ->see("$landingPage->home_description")
             ->see($landingPage->home_access_button)
