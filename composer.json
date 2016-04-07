@@ -49,8 +49,7 @@
 		 "php artisan clear-compiled",
 		 "php artisan optimize",
 		 "npm install apidoc -g",
-		 "apidoc -i ./app/ -o public_html/api/",
-		 "php artisan migrate"
+		 "apidoc -i ./app/ -o public_html/api/"
 	  ],
 	  "post-update-cmd": [
 		 "php artisan clear-compiled",
