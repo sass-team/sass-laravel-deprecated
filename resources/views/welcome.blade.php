@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>SASS App</title>
 
     <style type="text/css">
         {!! File::get(public_path(elixir('css/landing-page/above-the-fold-content.min.css'))) !!}
