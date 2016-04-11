@@ -1,9 +1,10 @@
 <?php
 
 Route::group(['middleware' => ['web']], function () {
-    Route::group(['middleware' => ['auth']], function () {
+//    Route::group(['middleware' => ['auth']], function () {
+    Route::group([], function () {
         // not implemented
-        Route::get('dashboard', ['as' => 'dashboard_path', 'uses' => 'Auth\AuthController@getLogin']);
+        Route::get('dashboard', ['as' => 'dashboard_path', 'uses' => 'DashboardController@index']);
         Route::get('appointments/calendar', ['as' => 'dashboard_path', 'uses' => 'Auth\AuthController@getLogin']);
         Route::resource('appointments', 'Auth\AuthController');
         Route::resource('staff', 'Auth\AuthController');

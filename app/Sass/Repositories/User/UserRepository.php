@@ -27,4 +27,20 @@ interface UserRepository
      * @return mixed
      */
     public function assignTutorRole(User $user);
+
+    /**
+     * Check if given user has a role of admin.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function hasAdminRole(User $user);
+
+    /**
+     * Assign the 'admin' role to the given user.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function assignAdminRole(User $user);
 }
