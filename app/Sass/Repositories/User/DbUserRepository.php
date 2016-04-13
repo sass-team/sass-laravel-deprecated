@@ -66,4 +66,28 @@ class DbUserRepository extends DbRepository implements UserRepository
 
         return $user->save() ? $user : false;
     }
+
+    /**
+     * Check if given user has a role of admin.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function hasAdminRole(User $user)
+    {
+        return $this->hasRole($user, Role::ADMIN_ROLE);
+    }
+
+    /**
+     * Assign the 'admin' role to the given user.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function assignAdminRole(User $user)
+    {
+        $role = Role::where('name', Role::ADMIN_ROLE)->firstOrFail();
+
+        return $this->assignRole($user, $role);
+    }
 }

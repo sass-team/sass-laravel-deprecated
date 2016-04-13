@@ -7,7 +7,7 @@
 namespace Tests\integration\app\Sass\Repositories\LandingPage;
 
 use App\Sass\Repositories\LandingPage\DbLandingPageRepository;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
 /**
@@ -15,7 +15,7 @@ use Tests\TestCase;
  */
 class DbLandingPageRepositoryTest extends TestCase
 {
-    use DatabaseMigrations;
+    use DatabaseTransactions;
 
     /** @test */
     public function it_fetches_active_landing_page()

@@ -1,23 +1,22 @@
 <?php
-
 /**
  * @author Rizart Dokollari <r.dokollari@gmail.com>
- * @since 05/04/16
+ * @since 4/11/16
  */
-namespace Tests\functional\tutor;
+namespace Tests\functional\admin;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
 /**
- * Class AuthenticationTest.
+ * Class DashboardTest.
  */
-class AuthenticationTest extends TestCase
+class DashboardTest extends TestCase
 {
     use DatabaseTransactions;
 
     /** @test */
-    public function it_access_sign_in_page()
+    public function it_reads_dashboard_elements()
     {
     }
 }
