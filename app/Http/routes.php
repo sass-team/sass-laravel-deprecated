@@ -25,7 +25,7 @@ $this->group(['middleware' => ['web']], function () {
 // API
 $this->group(['middleware' => 'api', 'prefix' => 'api'], function () {
     $this->group(['prefix' => 'v1'], function () {
-        $this->get('login', ['as' => 'api.v1.auth.login', 'uses' => 'Auth\AuthController@getLogin']);
+        $this->post('login', ['as' => 'api.v1.auth.login', 'uses' => 'Api\V1\AuthController@postLogin']);
 
         $this->group(['middleware' => 'api.v1.auth'], function () {
         });

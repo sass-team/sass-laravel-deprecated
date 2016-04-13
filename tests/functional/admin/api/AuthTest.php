@@ -10,6 +10,7 @@ use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 /**
  * Class AuthTest.
@@ -29,17 +30,19 @@ class AuthTest extends TestCase
         $this->post(route('api.v1.auth.login'), ['email' => $admin->email, 'password' => 'wrong-pass'])
             ->seeJsonEquals([
                 'error' => [
-                    'message'     => 'Invalid Credentials.',
-                    'status_code' => 404,
-                ],
+                    'message'     => 'Invalid credentials.',
+                    'status_code' => 422,
+                ]
             ])
-            ->assertResponseStatus(400);
+            ->assertResponseStatus(422);
 
-        $this->post(route('api.v1.auth.session'), ['email' => $admin->code, 'password' => 'pass'])
+        JWTAuth::shouldReceive('fromUser')->once()->andReturn('random-token');
+
+        $this->post(route('api.v1.auth.login'), ['email' => $admin->email, 'password' => 'pass'])
             ->seeJsonEquals([
                 'status_code' => 200,
                 'data'        => [
-                    'token'
+                    'token' => 'random-token'
                 ],
             ])
             ->assertResponseOk();

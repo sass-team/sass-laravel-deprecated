@@ -5,8 +5,8 @@
  */
 namespace App\Http\Responders\Api;
 
-use Illuminate\Http\Response;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\Response as HttpResponses;
 
 trait ApiResponder
@@ -102,15 +102,6 @@ trait ApiResponder
         return $this->setStatusCode(HttpResponses::HTTP_UNPROCESSABLE_ENTITY)->respondWithError($message);
     }
 
-    /**
-     * @param string $message
-     *
-     * @return mixed
-     */
-    public function respondInvalidCredentials($message = 'Invalid Credentials.')
-    {
-        return $this->setStatusCode(HttpResponses::HTTP_UNAUTHORIZED)->respondWithError($message);
-    }
 
     /**
      * @param string $message
@@ -190,5 +181,10 @@ trait ApiResponder
     private function respondTokenMissing($message = 'Token is missing.')
     {
         return $this->setStatusCode(HttpResponses::HTTP_BAD_REQUEST)->respondWithError($message);
+    }
+
+    public function respondApiLimitExceeded($message = 'Too many Api calls.')
+    {
+        return $this->setStatusCode(HttpResponses::HTTP_TOO_MANY_REQUESTS)->respondWithError($message);
     }
 }
