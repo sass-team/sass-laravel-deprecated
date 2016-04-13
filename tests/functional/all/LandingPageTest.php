@@ -8,7 +8,6 @@ namespace Tests\functional\all;
 
 use App\Sass\Repositories\LandingPage\DbLandingPageRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
 /**
