@@ -32,7 +32,7 @@ class AuthTest extends TestCase
                 'error' => [
                     'message'     => 'Invalid credentials.',
                     'status_code' => 422,
-                ]
+                ],
             ])
             ->assertResponseStatus(422);
 
@@ -42,7 +42,7 @@ class AuthTest extends TestCase
             ->seeJsonEquals([
                 'status_code' => 200,
                 'data'        => [
-                    'token' => 'random-token'
+                    'token' => 'random-token',
                 ],
             ])
             ->assertResponseOk();

@@ -34,11 +34,10 @@ $this->group(['middleware' => 'api', 'prefix' => 'api'], function () {
             ->where('any', '(.*)?');
     });
 
-
     $this->any('{any}', ['as' => 'api.exception.not_found', 'uses' => 'Api\ExceptionsController@notFound'])
         ->where('any', '(.*)?');
 });
 
 // 404
-//$this->any('{any}', ['as' => 'exception.not_found', 'uses' => 'ExceptionsController@notFound'])
-//    ->where('any', '(.*)?');
+$this->any('{any}', ['as' => 'exception.not_found', 'uses' => 'ExceptionsController@notFound'])
+    ->where('any', '(.*)?');

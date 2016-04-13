@@ -36,8 +36,13 @@ class LoginRequest extends Request
     {
         $errors = $this->getValidatorInstance()->getMessageBag();
 
-        if ($errors->has('email')) return $this->respondUnprocessableEntity($errors->first('email'));
-        if ($errors->has('password')) return $this->respondUnprocessableEntity($errors->first('password'));
+        if ($errors->has('email')) {
+            return $this->respondUnprocessableEntity($errors->first('email'));
+        }
+
+        if ($errors->has('password')) {
+            return $this->respondUnprocessableEntity($errors->first('password'));
+        }
 
         return $this->respondInternalServerError();
     }

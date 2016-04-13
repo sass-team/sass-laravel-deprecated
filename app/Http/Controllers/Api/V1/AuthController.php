@@ -52,5 +52,4 @@ class AuthController extends ApiController
 
         return $this->respondWithSuccess(['token' => $token]);
     }
-
 }

@@ -168,7 +168,6 @@ trait ApiResponder
      * @param $data
      *
      * @return mixed
-     *
      */
     public function respondWithSuccess($data)
     {
@@ -178,13 +177,13 @@ trait ApiResponder
         ]);
     }
 
-    private function respondTokenMissing($message = 'Token is missing.')
-    {
-        return $this->setStatusCode(HttpResponses::HTTP_BAD_REQUEST)->respondWithError($message);
-    }
-
     public function respondApiLimitExceeded($message = 'Too many Api calls.')
     {
         return $this->setStatusCode(HttpResponses::HTTP_TOO_MANY_REQUESTS)->respondWithError($message);
+    }
+
+    private function respondTokenMissing($message = 'Token is missing.')
+    {
+        return $this->setStatusCode(HttpResponses::HTTP_BAD_REQUEST)->respondWithError($message);
     }
 }

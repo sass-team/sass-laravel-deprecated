@@ -18,6 +18,5 @@ class DashboardTest extends TestCase
     /** @test */
     public function it_reads_dashboard_elements()
     {
-            
     }
 }
