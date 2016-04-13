@@ -102,7 +102,6 @@ trait ApiResponder
         return $this->setStatusCode(HttpResponses::HTTP_UNPROCESSABLE_ENTITY)->respondWithError($message);
     }
 
-
     /**
      * @param string $message
      *

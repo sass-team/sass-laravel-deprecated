@@ -47,5 +47,4 @@ class AuthTest extends TestCase
             ])
             ->assertResponseOk();
     }
-
 }

@@ -7,7 +7,7 @@
 SASS App is a CMS (Content management system) and TMS (Time Management System) for Student Academic Services of DEREE college.  
 
 
-## [Api Docs](http://sass-stage.herokuapp.com/api/)
+## [Api Docs](http://sass-stage.herokuapp.com/apidoc/)
 
 ## Testing
 `php artisan migrate:refresh --database mysql_testing` Requires the .env variables.
