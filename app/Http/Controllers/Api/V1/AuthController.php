@@ -51,6 +51,7 @@ class AuthController extends ApiController
      *          }
      *     }
      */
+    
     /**
      * @param LoginRequest $loginRequest
      * @return \Illuminate\Http\Response|mixed
