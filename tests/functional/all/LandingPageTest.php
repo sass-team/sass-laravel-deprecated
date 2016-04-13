@@ -4,10 +4,11 @@
  * @author Rizart Dokollari <r.dokollari@gmail.com>
  * @since 06/04/16
  */
-namespace Tests\functional\any;
+namespace Tests\functional\all;
 
 use App\Sass\Repositories\LandingPage\DbLandingPageRepository;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
 /**
@@ -15,7 +16,7 @@ use Tests\TestCase;
  */
 class LandingPageTest extends TestCase
 {
-    use DatabaseMigrations;
+    use DatabaseTransactions;
 
     /** @test */
     public function it_reads_contents()

@@ -3,7 +3,7 @@
  * @author Rizart Dokollari <r.dokollari@gmail.com>
  * @since 4/11/16
  */
-namespace Tests\functional\api\admin;
+namespace Tests\functional\admin\api;
 
 use App\Sass\Repositories\User\DbUserRepository;
 use App\User;
@@ -24,16 +24,23 @@ class AuthTest extends TestCase
         $password = 'pass';
         $dbUserRepository = new DbUserRepository();
         $admin = factory(User::class)->create(['password' => Hash::make($password)]);
+        $dbUserRepository->assignAdminRole($admin);
 
-        $this->post(route('api.v1.auth.session'), ['code' => $admin->code, 'password' => 'wrong-pass'])
+        $this->post(route('api.v1.auth.login'), ['email' => $admin->email, 'password' => 'wrong-pass'])
             ->seeJsonEquals([
-                'valid' => false,
+                'error' => [
+                    'message'     => 'Invalid Credentials.',
+                    'status_code' => 404,
+                ],
             ])
-            ->assertResponseOk();
+            ->assertResponseStatus(400);
 
-        $this->post(route('api.v1.auth.session'), ['code' => $admin->code, 'password' => 'pass'])
+        $this->post(route('api.v1.auth.session'), ['email' => $admin->code, 'password' => 'pass'])
             ->seeJsonEquals([
-                'valid' => true,
+                'status_code' => 200,
+                'data'        => [
+                    'token'
+                ],
             ])
             ->assertResponseOk();
     }

@@ -9,3 +9,7 @@ SASS App is a CMS (Content management system) and TMS (Time Management System) f
 
 ## [Api Docs](http://sass-stage.herokuapp.com/api/)
 
+## Testing
+`php artisan migrate:refresh --database mysql_testing` Requires the .env variables.
+
+

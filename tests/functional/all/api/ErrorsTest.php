@@ -4,7 +4,7 @@
  * @author Rizart Dokollari <r.dokollari@gmail.com>
  * @since  27/03/16
  */
-namespace Tests\functional\api\any;
+namespace Tests\functional\all\api;
 
 use Tests\TestCase;
 

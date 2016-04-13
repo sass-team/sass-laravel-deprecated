@@ -2,7 +2,11 @@
 
 namespace App\Http;
 
+use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Routing\Middleware\ThrottleRequests;
+use Tymon\JWTAuth\Middleware\GetUserFromToken;
+use Tymon\JWTAuth\Middleware\RefreshToken;
 
 class Kernel extends HttpKernel
 {
@@ -45,8 +49,14 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth'       => \App\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'auth.basic' => AuthenticateWithBasicAuth::class,
         'guest'      => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'throttle'   => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'throttle'   => ThrottleRequests::class,
+
+        'jwt.auth'    => GetUserFromToken::class,
+        'jwt.refresh' => RefreshToken::class,
+
+        'api.v1.auth'    => \App\Http\Middleware\Api\V1\Authenticate::class,
+        'api.v1.refresh' => \App\Http\Middleware\Api\V1\RefreshToken::class,
     ];
 }
