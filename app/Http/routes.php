@@ -1,8 +1,7 @@
 <?php
 
-$this->group(['middleware' => ['web']], function () {
-    $this->group(['middleware' => 'jwt.refresh'], function () {
-        // not implemented
+$this->group(['middleware' => 'web'], function () {
+    $this->group(['middleware' => 'auth'], function () {
         $this->get('dashboard', ['as' => 'dashboard_path', 'uses' => 'DashboardController@index']);
         $this->get('appointments/calendar', ['as' => 'dashboard_path', 'uses' => 'Auth\AuthController@getLogin']);
         $this->resource('appointments', 'Auth\AuthController');
@@ -22,7 +21,6 @@ $this->group(['middleware' => ['web']], function () {
     $this->post('password/reset', 'Auth\PasswordController@reset');
 });
 
-// API
 $this->group(['middleware' => 'api', 'prefix' => 'api'], function () {
     $this->group(['prefix' => 'v1'], function () {
         $this->post('login', ['as' => 'api.v1.auth.login', 'uses' => 'Api\V1\AuthController@postLogin']);

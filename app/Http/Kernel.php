@@ -53,9 +53,6 @@ class Kernel extends HttpKernel
         'guest'      => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle'   => ThrottleRequests::class,
 
-        'jwt.auth'    => GetUserFromToken::class,
-        'jwt.refresh' => RefreshToken::class,
-
         'api.v1.auth'    => \App\Http\Middleware\Api\V1\Authenticate::class,
         'api.v1.refresh' => \App\Http\Middleware\Api\V1\RefreshToken::class,
     ];
