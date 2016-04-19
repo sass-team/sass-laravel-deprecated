@@ -90,4 +90,28 @@ class DbUserRepository extends DbRepository implements UserRepository
 
         return $this->assignRole($user, $role);
     }
+
+    /**
+     * Check if given user has a role of secretary.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function hasSecretaryRole(User $user)
+    {
+        return $this->hasRole($user, Role::SECRETARY_ROLE);
+    }
+
+    /**
+     * Assign the 'secretary' role to the given user.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function assignSecretaryRole(User $user)
+    {
+        $role = Role::where('name', Role::SECRETARY_ROLE)->firstOrFail();
+
+        return $this->assignRole($user, $role);
+    }
 }

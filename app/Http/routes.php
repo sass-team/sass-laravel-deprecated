@@ -3,9 +3,9 @@
 $this->group(['middleware' => 'web'], function () {
     $this->group(['middleware' => 'auth'], function () {
         $this->get('dashboard', ['as' => 'dashboard_path', 'uses' => 'DashboardController@index']);
-        $this->get('appointments/calendar', ['as' => 'dashboard_path', 'uses' => 'Auth\AuthController@getLogin']);
-        $this->resource('appointments', 'Auth\AuthController');
-        $this->resource('staff', 'Auth\AuthController');
+//        $this->get('appointments/calendar', ['as' => 'appointments.calendar', 'uses' => 'Auth\AuthController@getLogin']);
+//        $this->resource('appointments', 'Auth\AuthController');
+//        $this->resource('staff', 'Auth\AuthController');
     });
 
     $this->get('/', ['as' => 'landing_page', 'uses' => 'LandingPagesController@getActive']);

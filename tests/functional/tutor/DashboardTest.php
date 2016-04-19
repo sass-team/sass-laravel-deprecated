@@ -3,7 +3,7 @@
  * @author Rizart Dokollari <r.dokollari@gmail.com>
  * @since 4/11/16
  */
-namespace Tests\functional\admin;
+namespace Tests\functional\tutor;
 
 use App\Sass\Repositories\User\DbUserRepository;
 use App\User;
@@ -21,10 +21,10 @@ class DashboardTest extends TestCase
     public function it_reads_dashboard_elements()
     {
         $dbUserRepository = new DbUserRepository();
-        $administrator = factory(User::class)->create();
-        $dbUserRepository->assignAdminRole($administrator);
+        $tutor = factory(User::class)->create();
+        $dbUserRepository->assignTutorRole($tutor);
 
-        $this->actingAs($administrator)
+        $this->actingAs($tutor)
             ->visit(route('dashboard_path'))
             ->seePageIs(route('dashboard_path'));
     }

@@ -27,6 +27,29 @@ class DbUserRepositoryTest extends TestCase
     }
 
     /** @test */
+    public function it_assigns_secretary_role_to_user()
+    {
+        $dbUserRepository = new DbUserRepository();
+        $user = factory(User::class)->create();
+
+        $this->assertFalse($dbUserRepository->hasSecretaryRole($user));
+        $this->assertNotFalse($user = $dbUserRepository->assignSecretaryRole($user));
+        $this->assertTrue($dbUserRepository->hasSecretaryRole($user));
+    }
+
+    /** @test */
+    public function it_checks_if_user_has_secretary_role()
+    {
+        $dbUserRepository = new DbUserRepository();
+        $user = factory(User::class)->create();
+
+        $this->assertFalse($dbUserRepository->hasSecretaryRole($user));
+        $this->assertNotFalse($user = $dbUserRepository->assignSecretaryRole($user));
+        $this->assertTrue($dbUserRepository->hasSecretaryRole($user));
+    }
+
+
+    /** @test */
     public function it_assigns_admin_role_to_user()
     {
         $dbUserRepository = new DbUserRepository();

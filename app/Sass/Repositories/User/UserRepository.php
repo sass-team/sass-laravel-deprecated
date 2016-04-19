@@ -43,4 +43,20 @@ interface UserRepository
      * @return mixed
      */
     public function assignAdminRole(User $user);
+
+    /**
+     * Check if given user has a role of secretary.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function hasSecretaryRole(User $user);
+
+    /**
+     * Assign the 'secretary' role to the given user.
+     *
+     * @param User $user
+     * @return mixed
+     */
+    public function assignSecretaryRole(User $user);
 }
